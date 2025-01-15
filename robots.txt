@@ -1,42 +1,58 @@
-### robots.txt ###
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /tmp/
 
+# Sitemap pour faciliter l'exploration
 Sitemap: https://clairvoyancemedium.github.io/spolehlive-a-rychle-vesteni-e-mailem.github.io/sitemap.xml
 
-### sitemap.xml ###
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://clairvoyancemedium.github.io/spolehlive-a-rychle-vesteni-e-mailem.github.io/</loc>
-        <lastmod>2025-01-08</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://clairvoyancemedium.github.io/spolehlive-a-rychle-vesteni-e-mailem.github.io/about/</loc>
-        <lastmod>2025-01-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://clairvoyancemedium.github.io/spolehlive-a-rychle-vesteni-e-mailem.github.io/contact/</loc>
-        <lastmod>2025-01-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://clairvoyancemedium.github.io/spolehlive-a-rychle-vesteni-e-mailem.github.io/pricing/</loc>
-        <lastmod>2025-01-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://clairvoyancemedium.github.io/spolehlive-a-rychle-vesteni-e-mailem.github.io/faq/</loc>
-        <lastmod>2025-01-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-</urlset>
+# Répertoires et fichiers à bloquer
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /settings/
+Disallow: /search/
+Disallow: /scripts/
+Disallow: /old/
+
+# Fichiers spécifiques à bloquer
+Disallow: /readme.html
+Disallow: /license.txt
+
+# Empêcher l'indexation des paramètres d'URL
+Disallow: /*?*
+Disallow: /*&*
+
+# Directives spécifiques pour Googlebot
+User-agent: Googlebot
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Empêcher l'indexation des fichiers spécifiques
+Disallow: /*.php$
+Disallow: /*.json$
+Disallow: /*.zip$
+
+# Directives de crawl-delay pour certains bots (en secondes)
+User-agent: bingbot
+Crawl-delay: 10
+
+User-agent: Yandex
+Crawl-delay: 5
+
+# Empêcher certains bots spécifiques
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SEMrushBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+# Préférences générales
+Host: https://clairvoyancemedium.github.io/spolehlive-a-rychle-vesteni-e-mailem.github.io/
