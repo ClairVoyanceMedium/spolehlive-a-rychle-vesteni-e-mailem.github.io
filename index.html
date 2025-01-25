@@ -785,7 +785,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="mailto:contact.clairvoyancemedium@gmail.com" target="_blank" rel="noopener noreferrer">KONTAKT</a>
         <br>
         <br>
-        <a href="https://www.clairvoyancemedium.com/Conditions-Generales-des-Ventes-et-d-Utilisation-ccsaaaaaa.asp" target="_blank" rel="noopener noreferrer">© 2025 ClairVoyanceMedium.com - Všechna práva vyhrazena</a>
+        <a href="https://www.clairvoyancemedium.com/Conditions-Generales-des-Ventes-et-d-Utilisation-ccsaaaaaa.asp" target="_blank" rel="noopener noreferrer">
+  © <span id="current-year"></span> ClairVoyanceMedium.com - Všechna práva vyhrazena
+</a>
+
+<script>
+  // Získání aktuálního roku
+  const currentYear = new Date().getFullYear();
+  // Vložení roku do prvku s ID "current-year"
+  document.getElementById("current-year").textContent = currentYear;
+</script>
         <br>
         <br>
     </footer>
